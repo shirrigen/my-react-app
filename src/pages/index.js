@@ -6,13 +6,17 @@ import Image from '../components/image'
 
 const IndexPage = () => (
   <Layout>
-    <h1>欢迎</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
+    <div>
+      <div className="Hero">
+       <div className="HeroGroup">
+          <h1>Welcome to RGBL</h1>
+           <p>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+           </p>
+        <Link to="/page-2/">Play</Link>
+       </div>
+      </div>
     </div>
-    <Link to="/page-2/">第二页</Link>
+
   </Layout>
 )
 
