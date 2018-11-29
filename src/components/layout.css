@@ -15,7 +15,7 @@ a {
 
 .Hero {
   background: url('../images/leo-manjarrez-272519-unsplash.jpg');
-  height: 600px;
+  height: 600x;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -93,8 +93,23 @@ a {
 
 }
 
+/* svg 位置调整 */
 .Hero svg {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 16px;
+  margin: 48px 0;
+  justify-items: center;
+}
+
+@media (max-width:640px) {
+  .Hero .Logos {
+    grid-template-columns: repeat(3,1fr);
+  }
 }
