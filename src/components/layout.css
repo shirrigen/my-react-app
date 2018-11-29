@@ -18,6 +18,7 @@ a {
   height: 600px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .HeroGroup {
@@ -32,6 +33,12 @@ a {
   color: #28283C;
   font-size: 48px;
   line-height: 1.5;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 700ms;
+  animation-delay: 100ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: 	cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .Hero p {
@@ -39,6 +46,8 @@ a {
   opacity: .8;
   font-size: 24px;
   line-height: 1.3;
+  animation: HeroAnimation 700ms 200ms forwards cubic-bezier(0.0, 0.0, 0.2, 1);
+  opacity: 0;
   
 }
 
@@ -50,8 +59,10 @@ a {
   padding: 8px 32px;
   border: 1px solid #28283c;
   border-radius: 4px;
+}
 
-
+.Hero a:hover {
+  background: #353550;
 }
 
 @media (max-width:640px) {
@@ -66,4 +77,24 @@ a {
   .Hero p {
     font-size: 16px;
   }
+}
+/* fade in out 过渡动画 */
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+
+  }
+
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
