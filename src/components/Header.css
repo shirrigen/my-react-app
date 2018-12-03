@@ -1,59 +1,71 @@
 .Header {
-    position: fixed;
-    width: 100%;
-    padding: 24px 0;
-    z-index: 100;
+	position: fixed;
+	width: 100%;
+	padding: 24px 0;
+	z-index: 100;
+	transition: 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.HeaderScrolled {
+	background: rgba(0, 0, 0, .8);
+	padding: 16px 0;
+	backdrop-filter: blur(16px);
 }
 
 .HeaderGroup {
-    max-width: 800px;
-    margin: 0 auto;
-    display: grid;  /* 布局方式 */
-    grid-template-columns: repeat(5,auto); /* 5等分 */
-    align-items: center;  /* 水平对齐 */
-    justify-items: center; /* 居中对齐 */
+	max-width: 800px;
+	margin: 0 auto;
+	display: grid;
+	/* 布局方式 */
+	grid-template-columns: repeat(5, auto);
+	/* 5等分 */
+	align-items: center;
+	/* 水平对齐 */
+	justify-items: center;
+	/* 居中对齐 */
 }
 
-.Header a{
-    color: #28283C;
-    font-weight: 700;
-    font-size: 16px;
+.Header a {
+	color: rgb(255, 255, 255);
+	font-weight: 700;
+	font-size: 16px;
 }
 
 .Header a:hover {
-    color: #e00000;
+	color: #e00000;
 }
 
-.Header button{
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 700;
-    background: #e00000;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
+.Header button {
+	padding: 8px 16px;
+	font-size: 16px;
+	font-weight: 700;
+	background: #e00000;
+	color: white;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .Header button:hover {
-    background-color: #e84242;
-    transform: translateY(-2px);
+	background-color: #e84242;
+	transform: translateY(-2px);
 }
 
 /* 响应式布局 */
 @media (max-width:640px) {
-    .Header {
-        padding: 16px 0;
-    }
+	.Header {
+		padding: 16px 0;
+	}
 
-    .HeaderGroup {
-        grid-template-columns: repeat(4,auto);
-    }
+	.HeaderGroup {
+		grid-template-columns: repeat(4, auto);
+	}
 
-    .Header a:nth-child(4) { /* 隐藏第四个链接 */
-        display: none;
-    }
+	.Header a:nth-child(4) {
+		/* 隐藏第四个链接 */
+		display: none;
+	}
 
 }

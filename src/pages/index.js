@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Image from '../components/image'
 import Card from '../components/Card';
+import Section from '../components/Section';
 
 const IndexPage = () => (
   <Layout>
@@ -59,7 +60,13 @@ const IndexPage = () => (
             text="19 sections"
             image={require('../images/img-bg-04.jpg')} />
           </div>
-      </div>      
+      </div>
+       <Section 
+          image={require('../images/wallpaper-02.svg')}
+          logo={require('../images/linkedin-108.png')}
+          title="React for Designers"
+          text="Gatsby documentation sometimes includes screenshots of code editors; these screenshots show the VS Code editor, so if you don’t have a preferred code editor yet, using VS Code will make sure that your screen looks just like the screenshots in the tutorial and docs."
+       />     
     </div>
 
   </Layout>
